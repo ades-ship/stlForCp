@@ -9,6 +9,9 @@ int main(){
     cout<<p.first<<" "<<p.second<<endl;
     //   or
     cout<<p.first<<" "<<p.second<<endl;
+    pair<int ,string> p1;
+    p1=p;
+    cout<<p1.first<<" "<<p1.second<<endl;
     
     return 0;
 }

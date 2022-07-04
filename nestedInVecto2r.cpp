@@ -1,13 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
-void printVec(vector<pair<int, int>> vrr)
-{
-    cout << "size of vector :" << vrr.size() << endl;
-    for (int i = 0; i < vrr.size(); i++)
-    {
-        cout << vrr[i].first << " " << vrr[i].second << endl;
-    }
-}
+// void printVec(vector<pair<int, int> > vrr)
+// {
+//     cout << "size of vector :" << vrr.size() << endl;
+//     for (int i = 0; i < vrr.size(); i++)
+//     {
+//         cout << vrr[i].first << " " << vrr[i].second << endl;
+//     }
+// }
 
 void printVector(vector<int> &vrr)
 {
@@ -19,15 +19,15 @@ void printVector(vector<int> &vrr)
     cout << "\n";
 }
 
-void printVector(vector<vector<int> > &vrr)
-{
-    cout << "size of vector :" << vrr.size() << endl;
-    for (int i = 0; i < vrr.size(); i++)
-    {
-        cout << vrr[i] << " ";
-    }
-    cout << "\n";
-}
+// void printVector(vector<vector<int> > &vrr)
+// {
+//     cout << "size of vector :" << vrr.size() << endl;
+//     for (int i = 0; i < vrr.size(); i++)
+//     {
+//         cout << vrr[i] << " ";
+//     }
+//     cout << "\n";
+// }
 
 int main()
 {
@@ -70,13 +70,13 @@ int main()
     //  vector of vector
     int N;
     cin >> N;
-    vector<vector<int>> vrr;
+    vector<vector<int> > vrr;   // vector of vector
     for (int i = 0; i < N; i++)
     {
         int n;
         cin >> n;
         vector<int> temp;
-        vrr.push_back(vector<int> ());
+        vrr.push_back(vector<int> ());  
         for (int j = 0; j < n; j++)
         {
             int num;
@@ -85,8 +85,12 @@ int main()
         }
         vrr.push_back(temp);
     }
-
-    printVecctor(vrr[0]);    
+ for (int i = 0; i < vrr.size(); i++)
+ {
+      printVector(vrr[i]);
+ }
+    // cout<<vrr[0];
+    printVector(vrr[0]);    
 
     return 0;
 }

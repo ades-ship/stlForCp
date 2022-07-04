@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 void print(map<int,string> &m) {
-    cout<<m.size()<<endl;
+    cout<<"\n"<<m.size();
     for(auto &it:m) {
         cout<<it.first<<" "<<it.second<<endl;
     }
@@ -26,5 +26,36 @@ int main() {
     for(auto it: m) {
         cout<<it.first<<" "<<it.second<<endl;
     }
+
+     auto gg=m.find(2);    //   O(log(n))
+     cout<<"-------------find---------->"<<endl;
+   
+     if(gg == m.end())
+     {
+        cout<<"no values";
+     }  else {
+          cout<<(*gg).first<<" "<<(*gg).second<<endl;
+     }
+    cout<<"\n --------------------maps values before erase------------->";
     print(m);
+     if(gg!=m.end()) {
+        m.erase(gg);
+     }
+ 
+    cout<<"\n --------------------maps values after erase------------->";
+    m.clear();
+    cout<<"\n ----------------after earse--------------->";
+
+    // auto it1=m.find(12);
+    // cout<<(*it1++).first<<" "<<(*it1++).second<<endl;
+ 
+    print(m);
+ 
+ cout<<"\n------------------------->>>>>>>>";
+    map<string,string> mp;
+    mp.insert({"adesh","geu"});    // time complexity when key is string   -->   s.size() * O(log(n))   s is string 
+    for(auto &i:mp) {
+        cout<<"\n"<<i.first<<" "<<i.second<<endl;
+    }
+
 }

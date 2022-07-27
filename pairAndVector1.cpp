@@ -3,7 +3,7 @@ using namespace std;
 
 void printVector(vector<string> v)
 {
-    cout << "size is :" << v.size() << endl;
+    cout << "size is :" << v.size() << endl;  // tc of size() is O(1)
     for (int i = 0; i < v.size(); i++)
     {
         cout << v[i] << " ";
@@ -54,7 +54,7 @@ int main()
     // printVector(v);
     // vector<int> vrr(5,3);
     // vrr.push_back(4);
-    // vrr.pop_back();
+    // vrr.pop_back();   // O(1)
     // vector<int> &vrr1=vrr;   // o(n);
     // vrr1.push_back(10);
     // printVector(vrr);
@@ -74,3 +74,6 @@ int main()
 
     return 0;
 }
+
+
+// on  online platform the size of vector is 10^5 to 10^7;

@@ -9,17 +9,7 @@ using namespace std;
 //     }
 // }
 
-void printVector(vector<int> &vrr)
-{
-    cout << "size of vector :" << vrr.size() << endl;
-    for (int i = 0; i < vrr.size(); i++)
-    {
-        cout << vrr[i] << " ";
-    }
-    cout << "\n";
-}
-
-// void printVector(vector<vector<int> > &vrr)
+// void printVector(vector<int> &vrr)
 // {
 //     cout << "size of vector :" << vrr.size() << endl;
 //     for (int i = 0; i < vrr.size(); i++)
@@ -28,6 +18,16 @@ void printVector(vector<int> &vrr)
 //     }
 //     cout << "\n";
 // }
+
+void printVector(vector<vector<int> > &vrr)
+{
+    cout << "size of vector :" << vrr.size() << endl;
+    for (int i = 0; i < vrr.size(); i++)
+    {
+        cout << vrr[i] << " ";
+    }
+    cout << "\n";
+}
 
 int main()
 {
@@ -66,31 +66,57 @@ int main()
     // {
     //     printVector(vrr[i]);
     // }
+    // cout<<vrr[0][1];
 
     //  vector of vector
+//     int N;
+//     cin >> N;
+//     vector<vector<int> > vrr;   // vector of vector
+//     for (int i = 0; i < N; i++)
+//     {
+//         int n;
+//         cin >> n;
+//         vector<int> temp;
+//         vrr.push_back(vector<int> ());  
+//         for (int j = 0; j < n; j++)
+//         {
+//             int num;
+//             cin >> num;
+//             temp.push_back(num);
+//         }
+//         vrr.push_back(temp);
+//     }
+//  for (int i = 0; i < vrr.size(); i++)
+//  {
+//       printVector(vrr[i]);
+//  }
+//     cout<<vrr[0][1];
+//     printVector(vrr[0]);   
+
+
     int N;
-    cin >> N;
-    vector<vector<int> > vrr;   // vector of vector
-    for (int i = 0; i < N; i++)
-    {
-        int n;
-        cin >> n;
-        vector<int> temp;
-        vrr.push_back(vector<int> ());  
+     cin>>N;
+     vector<vector<int> > vp;
+     for (int i = 0; i < N; i++)
+     {
+        int n;   cin>>n;
+        vp.push_back(vector<int> ());
         for (int j = 0; j < n; j++)
         {
-            int num;
-            cin >> num;
-            temp.push_back(num);
+            int num;  cin>>num;
+            vp[j].push_back(num);
         }
-        vrr.push_back(temp);
-    }
- for (int i = 0; i < vrr.size(); i++)
- {
-      printVector(vrr[i]);
- }
-    // cout<<vrr[0];
-    printVector(vrr[0]);    
+        
+     }
+     vp[0].push_back(10);
+//   for (int i = 0; i < vp.size(); i++)
+//   {
+//        printVector(vp[i]);
+//   }
+  
+    
+     
+      
 
     return 0;
 }

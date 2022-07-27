@@ -2,28 +2,30 @@
 // for each queries we have to print the frequency of that string;
 
 #include<bits/stdc++.h>
+#include<unordered_map>
 using namespace std;
 int main() {
-//     unordered_map<string , int> m;
-//     int n;
-//     cin>>n;
-//     for (int i = 0; i < n; i++)
-//     {
-//         string s;
-//         cin>>s;
-//         m[s]++;
-//     }
+    unordered_map<string , int> m;
+    int n;
+    cin>>n;
+    for (int i = 0; i < n; i++)
+    {
+        string s;
+        cin>>s;
+        m[s]++;
+    }
 
-//    int q;
-//    cin>>q;
+   int q;
+   cin>>q;
 
-//    cout<<"\n ---------------frequency of each input query is -------------------";
-//    while(q--) {
-//       string s;
-//       cin>>s;
-//       cout<<m[s]<<endl;
+   cout<<"\n ---------------frequency of each input query is -------------------";
+   while(q--) {
+      string s;
+      cin>>s;
+      cout<<m[s]<<endl;
 
-//    }
+   }
+}
 
 //    map<int,vector<string> > m;
 //    m[1].push_back("adesh");
@@ -52,18 +54,18 @@ int main() {
 // }
 
 
-map <string, vector<string> > dict;
+// map <string, vector<string> > dict;
 
-string usa[] = { "NYC" , "LA" , "Chicago" , "Dallas" };
-dict["USA"] = std::vector<string>(usa,usa+4);
+// string usa[] = { "NYC" , "LA" , "Chicago" , "Dallas" };
+// dict["USA"] = std::vector<string>(usa,usa+4);
 
-   }
-//    cout<<dict["USA"];
-   for(map &value: dict) {
-    cout<<value;
-   }
+//    }
+// //    cout<<dict["USA"];
+//    for(map &value: dict) {
+//     cout<<value;
+//    }
 
-   for(auto &val: dict) {
-    cout<<val;
-   }
+//    for(auto &val: dict) {
+//     cout<<val;
+//    }
 

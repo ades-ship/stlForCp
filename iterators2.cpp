@@ -6,7 +6,8 @@ int main()
     int N;
     cin >> N;
     vector<int> vrr={1,2,3,45};
-   
+    
+    //  ranged based loops;
     for(int i:vrr) {
         cout<<i<<" ";
     }
@@ -14,13 +15,18 @@ int main()
      for(int &i:vrr) {
         i++;
         cout<<i<<" ";
-    }
+    } cout<<endl;
 
     vector<pair<int,int> > v_p={{1,2},{3,4},{5,6}};
     for(pair<int,int> &values:v_p) {
         cout<<values.first<<" "<<values.second<<endl;
     }
  cout<<endl;
+
+   for(auto it: v_p) {
+    cout<<it.first<<" "<<it.second<<endl;
+   }
+   
     vector<int> b={1,2,3,4};
     for(auto it=b.begin(); it!=b.end(); it++) {
         cout<<(*it)<<" ";

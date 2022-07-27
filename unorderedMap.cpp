@@ -2,9 +2,10 @@
 using namespace std;
 
 int main() {
-    // inbuilt implementation   --->   hashing
+    // inbuilt implementation   --->   hashing table
     // time complexity
     // valid key datatype
+    // we can only take primitive datatype in case of unordered map not complex container datatype like vector,pair,sets etc;
     // stores keys-values pair in random fashion
 
     unordered_map<int,string> um;

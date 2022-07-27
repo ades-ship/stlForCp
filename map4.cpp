@@ -7,7 +7,7 @@ void print(map<int,string> &m) {
     }
 }
 int main() {
-    // map is implement through black red tree;
+    // map is implement through red black  tree;
     //  map is used to store keys and values pair;
     // keys are stored in sorted ordered;
     //  for insert and access in maps complexity is O(log n) for each insertion and access of key-value pair O(log(n))
@@ -18,6 +18,8 @@ int main() {
     m[4]="nitish";
     m[2]="dhruv";
     m.insert({3,"arinjay"});
+
+    // m[5] by default holds value empty string or 0 in case of int .
     map<int ,string> :: iterator it;
     for(it=m.begin(); it!=m.end(); it++) {
         cout<<(*it).first<<" "<<(*it).second<<endl;
@@ -39,7 +41,7 @@ int main() {
     cout<<"\n --------------------maps values before erase------------->";
     print(m);
      if(gg!=m.end()) {
-        m.erase(gg);
+        m.erase(gg);  // log(n)
      }
  
     cout<<"\n --------------------maps values after erase------------->";

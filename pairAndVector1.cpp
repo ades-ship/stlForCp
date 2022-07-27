@@ -48,7 +48,7 @@ int main()
     // for (int i = 0; i < n; i++)
     // {
     //     int num; cin>>num;
-    //     v.push_back(num);
+        // v.push_back(num);   //  O(1);
     // }
 
     // printVector(v);
